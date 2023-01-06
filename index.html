@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Film List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+
+<body>
+    <main>
+        <section id="home">
+            <div class="home">
+                <img src="./assets/img/logo.png" alt="" class="logo">
+                <form>
+                    <div class="single-input">
+                        <input onkeyup="updateData()" type="text" class="input" id="title" required />
+                        <label for="title">Título</label>
+                    </div>
+
+                    <div class="single-input">
+                        <input onkeyup="updateData()" type="number" class="input" id="year" required />
+                        <label for="year">Ano</label>
+                    </div>
+
+                    <div class="single-input">
+                        <input onkeyup="updateData()" type="text" class="input" id="category" required />
+                        <label for="category">Categoria</label>
+                    </div>
+
+                    <div class="stars">
+                        <input onclick="updateData()" type="radio" id="cm_star-empty" name="fb" value="" checked />
+    
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input onclick="updateData()" type="radio" id="cm_star-1" name="fb" value="1" />
+    
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input onclick="updateData()" type="radio" id="cm_star-2" name="fb" value="2" />
+    
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input onclick="updateData()" type="radio" id="cm_star-3" name="fb" value="3" />
+    
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input onclick="updateData()" type="radio" id="cm_star-4" name="fb" value="4" />
+    
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input onclick="updateData()" type="radio" id="cm_star-5" name="fb" value="5" />
+                    </div>
+    
+                    <a href="javascript:void(0)" onclick="register()" class="btn btn-submit text-white">
+                        Cadastrar
+                    </a>
+                </form>
+            </div>
+        </section>
+
+        <section id="list">
+            <div class="list">
+                <table class="text-white">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Ano</th>
+                            <th>Categoria</th>
+                            <th>Nota</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="list-film" style="overflow-y: auto;">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
