@@ -43,11 +43,12 @@ body {
 .logo {
     width: 12rem;
     height: 7rem;
+    padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
     #home {
-        padding-top: 5.5rem;
+        padding-top: 6.5rem;
     }
 }
 
@@ -175,7 +176,7 @@ td {
     }
     
     #list {
-        padding: 5.5rem 0 0;
+        padding: 6.5rem 0 0;
     }
 
     .list {
